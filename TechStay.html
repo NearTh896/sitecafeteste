@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1>TechStay</h1>
+    <h2>Cadastro</h2>
+    <head>     
+        
+        <style>
+                body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Rancho, cursive;
+            margin: 0;
+            padding: 0;
+            background-color: #d8d8d8;
+            color: #333;
+                }
+
+                h1 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 4rem;
+            margin: 0;
+        }
+
+        
+         input[type="radio"] {
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #5c5c5c;
+            border-radius: 50%;
+            margin-right: 10px;
+            position: relative;
+    
+         }
+
+         form {
+            max-width: 500px;
+        
+            padding: 26px;
+            border: 5px solid #5c5c5c;
+            border-radius: 10px;
+            background-color: rgb(172, 218, 248);
+            
+         }
+    
+        div{
+            margin: auto;
+            margin-top: 10px;
+            font-size: medium;
+            padding: 10px;
+            text-align: left;
+
+
+            
+        }
+
+
+        </style>
+
+        <form id="Dados">
+
+        </table>
+        <form action="/enviar-dados" method="POST">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="Email">E-mail:</label>
+            <input type="text" id="Email" name="Email" required>
+
+            <label for="Telefone">Celular:</label>
+            <input type="tel" id="Telefone" name="Telefone"  required>
+
+
+            <label>Sexo:</label>
+            <div>
+                <input type="radio" id="Masculino" name="Sexo" value="Masculino" required>
+                <label for="Masculino">Masculino</label>
+                </div>
+                <div>
+                <input type="radio" id="Feminino" name="Sexo" value="Feminino" required>
+                <label for="Feminino">Feminino</label>
+                </div>
+                <div>
+                    <input type="radio" id="Outro" name="Sexo" value="Outro" required>
+                    <label for="Outro">Outro</label>
+                    </div>
+    
+
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" min="0" max="120">
+
+        
+            <label for="cidade">Cidade:</label>
+            <select id="cidade" name="cidade">
+                <option value="sp">São Paulo</option>
+                <option value="rj">Rio de Janeiro</option>
+                <option value="bh">Belo Horizonte</option>
+                <option value="ba">Salvador</option>
+            </select>
+        
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+            <label>Voce aceita os Termos de Uso?</label>
+            <label for="radio">Sim</label>
+            <input type="radio" id="radio" name="radio" required>
+            <label for="radio">Nao</label>
+            <input type="radio" id="radio" name="radio" required>
+
+            
+
+        
+            <button type="submit">Enviar</button>
+        </form>
+<div id="Dados"></div>
+
+<script>
+    document.getElementById('Dados').addEventListener('suvmit', function(event))
+        event.preventDefault();
+        function mostrarInformacoes() {
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('Email').value;
+            const telefone = document.getElementById('Telefone').value;
+
+            const informacoesDiv = document.getElementById('Dados');
+            informacoesDiv.innerHTML = `
+                <h3>Informações preenchidas:</h3>
+                <p><strong>Nome:</strong> ${nome}</p>
+                <p><strong>E-mail:</strong> ${email}</p>
+                <p><strong>Telefone:</strong> ${telefone}</p>
+            `;
+        }
+    </script>
+
+        <html>
