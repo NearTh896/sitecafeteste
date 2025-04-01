@@ -128,6 +128,23 @@
             text-align: start;
 
         }
+
+        .cabecalho-container{
+            display: flex;
+            justify-self: space-between;
+            align-items: center;
+
+        }
+
+        #relogio{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.5em;
+            background-color: #6F4E37;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0);
+        }
     </style>
 </head>
 <body>
@@ -179,11 +196,14 @@
         </div>
     </section>
 
+    <!--relogio funcional-->
     <header>
         <div class="cabecalho-container"
          class="logo-titulo">
         <img src="logo.png" alt="logo" class="logo"
         h1>Cafe % Aroma</h1>
+        </div>
+        <div id="relogio"></div>
         </div>
         <p class="slogan">ppp</p>
     </header>
@@ -211,5 +231,25 @@
     <footer>
         <p>&copy; 2025 Café & Aroma. Todos os direitos reservados.</p>
     </footer>
+
+    <!--script do relogio-->
+    <script>
+        function atualizarRelogio(){
+            const agora = new Date ();
+            const opcoes = {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true
+        };
+        document.getElementById(atualizarRelogio).textContent =
+        agora.toLocaleTimeString(pt-BR, opcoes);
+    }
+
+setInterval(atualizarRelogio, 1000);
+
+atualizarRelogio();
+
+    </script>
 </body>
 </html>

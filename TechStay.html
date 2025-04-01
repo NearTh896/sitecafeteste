@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <h1>TechStay</h1>
     <h2>Cadastro</h2>
-    <head>     
         
         <style>
                 body {
@@ -22,8 +21,7 @@
             margin: 0;
         }
 
-        
-         input[type="radio"] {
+        input[type="radio"], input[type="checkbox"] {
             appearance: none;
             width: 16px;
             height: 16px;
@@ -31,9 +29,35 @@
             border-radius: 50%;
             margin-right: 10px;
             position: relative;
-    
-         }
+        }
 
+        input[type="radio"]:checked, input[type="checkbox"]:checked {
+            background-color: #e9b91d;
+        }
+
+        input[type="checkbox"] {
+            border-radius: 4px; /* Checkboxes são quadrados */
+        }
+
+        input[type="checkbox"]:checked::before {
+            content: "\2713"; /* Unicode para checkmark */
+            color: white;
+            position: absolute;
+            top: -2px;
+            left: 2px;
+            font-size: 14px;
+        }
+
+        input[type="radio"]:checked::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #e9b91d;
+            top: 3px;
+        }
          form {
             max-width: 500px;
         
@@ -41,6 +65,7 @@
             border: 5px solid #5c5c5c;
             border-radius: 10px;
             background-color: rgb(172, 218, 248);
+            text-align: center;
             
          }
     
@@ -53,6 +78,17 @@
 
 
             
+        }
+        .dados{
+            max-width: 500px;
+        
+        padding: 26px;
+        border: 5px solid #5c5c5c;
+        border-radius: 10px;
+        background-color: rgb(172, 218, 248);
+        text-align: center;
+
+
         }
 
 
@@ -72,25 +108,24 @@
             <input type="tel" id="Telefone" name="Telefone"  required>
 
 
-            <label>Sexo:</label>
             <div>
-                <input type="radio" id="Masculino" name="Sexo" value="Masculino" required>
-                <label for="Masculino">Masculino</label>
-                </div>
-                <div>
-                <input type="radio" id="Feminino" name="Sexo" value="Feminino" required>
-                <label for="Feminino">Feminino</label>
-                </div>
-                <div>
-                    <input type="radio" id="Outro" name="Sexo" value="Outro" required>
-                    <label for="Outro">Outro</label>
-                    </div>
-    
+    <form id="formDados">
+        <label for="Sexo">Sexo:</label>
 
+            <label for="Masculino">Masculino</label>
+            <input type="radio" id="Masculino" name="Sexo" value="Masculino" required>
+    
+            <label for="Feminino">Feminino</label>
+            <input type="radio" id="Feminino" name="Sexo" value="Feminino" required>
+    
+            <label for="Outro">Outro</label>
+            <input type="radio" id="Outro" name="Sexo" value="Outro" required>   
+    </div> 
+<div>
             <label for="idade">Idade:</label>
             <input type="number" id="idade" name="idade" min="0" max="120">
-
-        
+</div>
+<div>
             <label for="cidade">Cidade:</label>
             <select id="cidade" name="cidade">
                 <option value="sp">São Paulo</option>
@@ -98,27 +133,25 @@
                 <option value="bh">Belo Horizonte</option>
                 <option value="ba">Salvador</option>
             </select>
-        
+        </div>
+        <div>
             <label for="mensagem">Mensagem:</label>
             <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+        </div>
+<div>
+    <label>Você aceita os Termos de Uso?</label>
+    <div>
+        <input type="radio" id="aceito" name="termos" value="sim" required>
+        <label for="aceito">Sim</label>
+    </div>
+    <div>
+        <input type="radio" id="naoAceito" name="termos" value="nao" required>
+        <label for="naoAceito">Não</label>
+    </div>
+</form>
 
-            <label>Voce aceita os Termos de Uso?</label>
-            <label for="radio">Sim</label>
-            <input type="radio" id="radio" name="radio" required>
-            <label for="radio">Nao</label>
-            <input type="radio" id="radio" name="radio" required>
-
-            
-
-        
-            <button type="submit">Enviar</button>
-        </form>
-<div id="Dados"></div>
-
-<script>
-    document.getElementById('Dados').addEventListener('suvmit', function(event))
-        event.preventDefault();
-        function mostrarInformacoes() {
+    <button type="submit">Enviar</button><script>
+       function mostrarInformacoes() {
             const nome = document.getElementById('nome').value;
             const email = document.getElementById('Email').value;
             const telefone = document.getElementById('Telefone').value;
@@ -130,7 +163,7 @@
                 <p><strong>E-mail:</strong> ${email}</p>
                 <p><strong>Telefone:</strong> ${telefone}</p>
             `;
-        }
-    </script>
+        }    </script>
+    </head>     
 
         <html>
