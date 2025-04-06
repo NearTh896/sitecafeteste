@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTubeTest</title>
+</head>
+<body>
+    <div>
+        <div class="yt">
+    <h1>YouTube</h1>
+    <div>
+        <img src="https://imgs.search.brave.com/NpPU8ahIBKvzTSNPBO_3ZFJZEyD1ZKEgToYHFom65GA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dW5pcmlvLmJyL3Vu/aXJpbzAwMC5odG1s/L2NsYS9pdmwveW91/dHViZS5wbmcvaW1h/Z2U" alt="">
+    </div>
+    </div>
+    <div>
+        <div class=pesquisa>
+            <input type="text" id="pesquisa" name="pesquisa" required>
+    </div>
+    <div>
+        <div class="video">
+            <h2>Videos do Carlinhos</h2>
+    <video width="560" height="315" controls>
+        <source src="videos/meu-video.mp4" type="video/mp4">
+    </video></div>
+    <div>
+        <h2>Comentarios</h2>
+        <div class="Comentarios">
+            <h3>Comentar</h3>
+            <div class="usuario">
+           <img width="40" height="40" src="a" allowfullscreen></img>
+    <p>obra de arte</p>
+            </div>
+        </div>
+        <div class="usuario2">
+            <img width="40" height="40" src="a" allowfullscreen></img>
+     <p>2050 homens diferentes choraram vendo isso </p>
+             </div>
+             <div class="usuario3">
+                <img width="40" height="40" src="a" allowfullscreen></img>
+         <p>a lenda</p>
+                 </div>
+     
+
+        <div class="videos1">
+            <img width="200" height="100" src="a" allowfullscreen></img>
+        </div>
+    <div>
+        <div class="videos2">
+            <img width="200" height="100" src="a" allowfullscreen></img>
+    </div>
+    <div>
+        <div class="videos3">
+            <img width="200" height="100" src="a" allowfullscreen></img>
+    </div>
+    <div>
+        <div class="videos4">
+            <img width="200" height="100" src="a" allowfullscreen></img>
+    </div>
+    <div>
+        <div class="videos5">
+            <img width="200" height="100" src="a" allowfullscreen></img>
+    </div>
+
+    
+</body>
+</html>
