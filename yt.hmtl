@@ -5,62 +5,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YouTubeTest</title>
 </head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #f8f8f8;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-content {
+    display: flex;
+    justify-content: space-between;
+}
+.video-area {
+    flex: 3;
+    padding: 20px;
+}
+.item-videos {
+    display: flex;
+    padding: 20px;
+    border-radius: 5px;
+    flex-direction: column;
+}
+.comments-section {
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    border-radius: 15px;
+    background-color: #ddd;
+    height: auto;
+}
+footer {
+    background-color: #f8f8f8;
+    padding: 10px;
+    text-align: center;
+}
+.thumb{
+    width: 150px;
+    height: 100px;
+    margin-right: 20px;
+}
+.item-videos p {
+    margin: 5px 0 0;
+    font-size: 1em;
+    color: #555;
+}
+.comments-section p{
+    margin: 5px 0 0;
+    font-size: 1em;
+    color: black;
+   
+}
+.logo{
+    weight:
+    height
+}
+</style>
 <body>
+    <header>
     <div>
-        <div class="yt">
+        <div class="logo">
     <h1>YouTube</h1>
     <div>
-        <img src="https://imgs.search.brave.com/NpPU8ahIBKvzTSNPBO_3ZFJZEyD1ZKEgToYHFom65GA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dW5pcmlvLmJyL3Vu/aXJpbzAwMC5odG1s/L2NsYS9pdmwveW91/dHViZS5wbmcvaW1h/Z2U" alt="">
+        <img src="https://imgs.search.brave.com/NpPU8ahIBKvzTSNPBO_3ZFJZEyD1ZKEgToYHFom65GA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dW5pcmlvLmJyL3Vu/aXJpbzAwMC5odG1s/L2NsYS9pdmwveW91/dHViZS5wbmcvaW1h/Z2U" alt="logo">
     </div>
     </div>
     <div>
-        <div class=pesquisa>
-            <input type="text" id="pesquisa" name="pesquisa" required>
-    </div>
-    <div>
-        <div class="video">
-            <h2>Videos do Carlinhos</h2>
-    <video width="560" height="315" controls>
-        <source src="videos/meu-video.mp4" type="video/mp4">
-    </video></div>
-    <div>
-        <h2>Comentarios</h2>
-        <div class="Comentarios">
-            <h3>Comentar</h3>
-            <div class="usuario">
-           <img width="40" height="40" src="a" allowfullscreen></img>
-    <p>obra de arte</p>
+        <div class=search.bar>
+            <input type="text" id="search" name="search" placeholder="Pesquisar">
             </div>
         </div>
-        <div class="usuario2">
-            <img width="40" height="40" src="a" allowfullscreen></img>
-     <p>2050 homens diferentes choraram vendo isso </p>
-             </div>
-             <div class="usuario3">
-                <img width="40" height="40" src="a" allowfullscreen></img>
-         <p>a lenda</p>
-                 </div>
-     
+        <div class="user-icons">
+        </header>
+            
+        </div>
+        <section>
+        
+    <video width="560" height="315" controls>
+        <source src="/home/kl3idh/Documents/VSC/yt/video/Qual_musica_q_vc_gosta_A_minha__essa_1hipyzb.mp4" type="Qual_musica_q_vc_gosta_A_minha__essa_1hipyzb/mp4">
+    </video></div>
+       <div>
+        <div class="video-area">
+            <h2>Videos do Carlinhos</h2>
+            <p>2050 views, 2025, 3 de abril </p>
 
-        <div class="videos1">
-            <img width="200" height="100" src="a" allowfullscreen></img>
+    <div>
+        <h2>Comentarios</h2>
+        <div class="comments-section">
+            <h3><strong>Comentar</strong></h3>
+            <div class="comments-section">
+           <img width="40" height="40" src="a" allowfullscreen></img>
+           <h3>Teo</h3>
+           <p>obra de arte</p>
+            </div>
+        </div>
+        <div class="comments-section">
+            <img width="40" height="40" src="a" allowfullscreen></img>
+            <h3>Kleide</h3>
+            <p>2050 homens diferentes choraram vendo isso </p>
+             </div>
+             <div class="comments-section">
+                <img width="40" height="40" src="a" allowfullscreen></img>
+                <h3>cavalos</h3>
+                <p>a lenda</p>
+                 </div>
+                </section>     
+
+        <div class="item-videos">
+            <img width="200" height="100" src="/home/kl3idh/Documents/VSC/yt/images/untitled.png" allowfullscreen></img>
         </div>
     <div>
-        <div class="videos2">
-            <img width="200" height="100" src="a" allowfullscreen></img>
+        <div class="item-videos">
+            <img width="200" height="100" src="/home/kl3idh/Documents/VSC/yt/images/untitled.png" allowfullscreen></img>
     </div>
     <div>
-        <div class="videos3">
-            <img width="200" height="100" src="a" allowfullscreen></img>
-    </div>
+        <div class="item-videos">
+            <img width="200" height="100" src="/home/kl3idh/Documents/VSC/yt/images/untitled.png"  allowfullscreen></img>
+            <h3>hgfd</h3>
+            <p>hgrf</p>
+           </div></div>
     <div>
-        <div class="videos4">
-            <img width="200" height="100" src="a" allowfullscreen></img>
+        <div class="item-videos">
+            <img width="200" height="100" src="/home/kl3idh/Documents/VSC/yt/images/untitled.png" allowfullscreen></img>
     </div>
-    <div>
-        <div class="videos5">
-            <img width="200" height="100" src="a" allowfullscreen></img>
-    </div>
+    <nav>
+        <a href="/home/kl3idh/Documents/VSC/yt/images/untitled.png"></a>
+        <a href="/home/kl3idh/Documents/VSC/yt/images/untitled.png"></a>
+        <a href="/home/kl3idh/Documents/VSC/yt/images/untitled.png"></a>
+        <a href="/home/kl3idh/Documents/VSC/yt/images/untitled.png"></a>
+    </nav>
+
 
     
 </body>
