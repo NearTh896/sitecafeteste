@@ -19,7 +19,15 @@
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             font-size: 4rem;
             margin: 0;
+            text-align: left;
         }
+        h2 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 2rem;
+            margin: 0;
+            text-align: left;
+        }
+
 
         input[type="radio"], input[type="checkbox"] {
             appearance: none;
@@ -39,11 +47,13 @@
             border-radius: 4px; /* Checkboxes são quadrados */
         }
 
-        input[type="checkbox"]:checked::before {
-            content: "\2713"; /* Unicode para checkmark */
+        input[type="checkbox"]:hover {
+            content: ""; /* Unicode para checkmark */
             color: white;
             position: absolute;
-            top: -2px;
+            top: 3px;
+            width: 10px;
+            height: 10px;
             left: 2px;
             font-size: 14px;
         }
@@ -65,7 +75,7 @@
             border: 5px solid #5c5c5c;
             border-radius: 10px;
             background-color: rgb(172, 218, 248);
-            text-align: center;
+            text-align: left;
             
          }
     
@@ -74,7 +84,8 @@
             margin-top: 10px;
             font-size: medium;
             padding: 10px;
-            text-align: left;
+            text-align: center;
+            align-content: center;
 
 
             
@@ -85,10 +96,8 @@
         padding: 26px;
         border: 5px solid #5c5c5c;
         border-radius: 10px;
-        background-color: rgb(172, 218, 248);
+        background-color: rgb(103, 141, 167);
         text-align: center;
-
-
         }
 
 
@@ -98,19 +107,22 @@
 
         </table>
         <form action="/enviar-dados" method="POST">
-            <label for="nome">Nome Completo:</label>
+            <div>
+            <label for="nome"><strong>Nome Completo:</strong></label>
             <input type="text" id="nome" name="nome" required>
-
-            <label for="Email">E-mail:</label>
+        </div>
+        <div>
+            <label for="Email"><strong>E-mail:</strong></label>
             <input type="text" id="Email" name="Email" required>
-
-            <label for="Telefone">Celular:</label>
+        </div>
+        <div>
+            <label for="Telefone"><strong>Celular:</strong></label>
             <input type="tel" id="Telefone" name="Telefone"  required>
-
+        </div>
 
             <div>
     <form id="formDados">
-        <label for="Sexo">Sexo:</label>
+        <label for="Sexo"><strong>Sexo:</strong></label>
 
             <label for="Masculino">Masculino</label>
             <input type="radio" id="Masculino" name="Sexo" value="Masculino" required>
@@ -122,11 +134,11 @@
             <input type="radio" id="Outro" name="Sexo" value="Outro" required>   
     </div> 
 <div>
-            <label for="idade">Idade:</label>
+            <label for="idade"><strong>Idade:</strong></label>
             <input type="number" id="idade" name="idade" min="0" max="120">
 </div>
 <div>
-            <label for="cidade">Cidade:</label>
+            <label for="cidade"><strong>Cidade:</strong></label>
             <select id="cidade" name="cidade">
                 <option value="sp">São Paulo</option>
                 <option value="rj">Rio de Janeiro</option>
@@ -135,11 +147,11 @@
             </select>
         </div>
         <div>
-            <label for="mensagem">Mensagem:</label>
+            <label for="mensagem"><strong>Mensagem:</strong></label>
             <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
         </div>
 <div>
-    <label>Você aceita os Termos de Uso?</label>
+    <label><strong>Você aceita os Termos de Uso?</strong></label>
     <div>
         <input type="radio" id="aceito" name="termos" value="sim" required>
         <label for="aceito">Sim</label>
@@ -148,9 +160,10 @@
         <input type="radio" id="naoAceito" name="termos" value="nao" required>
         <label for="naoAceito">Não</label>
     </div>
+
 </form>
 
-    <button type="submit">Enviar</button><script>
+    <button type="submit"><strong>Enviar</strong></button><script>
        function mostrarInformacoes() {
             const nome = document.getElementById('nome').value;
             const email = document.getElementById('Email').value;
