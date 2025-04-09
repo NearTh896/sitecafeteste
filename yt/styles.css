@@ -1,88 +1,203 @@
-body{
-    font-family: "Roboto", "Arial", sans-serif;
-    
-}
-p{
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;    }
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: 1fr; /* Layout single-column por padrão (mobile) */
-    gap: 20px; /* Espaço entre as seções */
-    
+/* Estilos Globais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
-/* Desktop: Grid com área para sidebar (se quiser adicionar no futuro) */
-@media (min-width: 768px) {
-    .container {
-        grid-template-columns: 3fr 1fr; /* 3:1 proporção (ex: vídeo + sidebar) */
-        grid-template-areas: 
-            "video-player sidebar"
-            "video-info sidebar"
-            "description sidebar"
-            "comments sidebar";
-    }
-
-    .video-player {
-        grid-area: video-player;
-    }
-
-    /* Exemplo se adicionar sidebar futuramente:
-    .sidebar {
-        grid-area: sidebar;
-    } */
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-/* Estilos das seções (comum para mobile/desktop) */
-.video-player {
-    background: #000;
-    border-radius: 12px;
-    overflow: hidden;
-    aspect-ratio: 16 / 9; /* Mantém a proporção do vídeo */
-    position: relative;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
-    padding: 20px;
-    
-    
-}
-
-.video-info, .description, .comments {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    border: 1px solid #e0e0e0;
-    display: grid;
-    border-radius: 15px;
-}
+/* Cabeçalho */
 header {
-    background-color: #f8f8f8;
-    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 15px;
-
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
-.related-videos{
-    padding: 20px;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr, 1fr;
-    width: 350px;
 
+header .logo {
+    display: flex;
+    align-items: center;
 }
-.lateral-bar{
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    border: 1px solid #e0e0e0;
-    border-radius: 15px;
 
+header .logo img {
+    height: 28px;
+    margin-right: 10px;
+}
+
+header .search-bar {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .search-bar input {
+    width: 50%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+header .user-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header .user-icons img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+/* Área Principal */
+.main-content {
+    display: flex;
+    margin: 20px;
+}
+
+/* Área do Vídeo */
+.video-area {
+    flex: 3;
+    margin-right: 20px;
+}
+
+.video-area video {
+    width: 100%;
+    border-radius: 5px;
+    background-color: #000;
+}
+
+.video-info {
+    margin-top: 15px;
+}
+
+.video-info h1 {
+    font-size: 18px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.video-info .video-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.video-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.video-actions button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.video-actions button:hover {
+    color: #000;
+}
+
+/* Área de Comentários */
+.comments-section {
+    margin-top: 30px;
+}
+
+.comments-section h2 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.new-comment {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.new-comment input {
+    flex: 1;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.comment {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.comment img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.comment p {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Sugestões de Vídeos */
+.suggested-videos {
+    flex: 1;
+}
+
+.suggested-video {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.suggested-video img {
+    width: 120px;
+    height: 70px;
+    border-radius: 5px;
+    background-color: #ddd;
+}
+
+.suggested-video .video-details {
+    flex: 1;
+}
+
+.suggested-video .video-details h3 {
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.4;
+    color: #000;
+}
+
+.suggested-video .video-details p {
+    font-size: 12px;
+    color: #555;
+    margin: 5px 0 0;
 }
