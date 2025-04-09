@@ -1,0 +1,65 @@
+body{
+    font-family: "Roboto", "Arial", sans-serif;
+    
+}
+p{
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;    }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr; /* Layout single-column por padrão (mobile) */
+    gap: 20px; /* Espaço entre as seções */
+}
+
+/* Desktop: Grid com área para sidebar (se quiser adicionar no futuro) */
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: 3fr 1fr; /* 3:1 proporção (ex: vídeo + sidebar) */
+        grid-template-areas: 
+            "video-player sidebar"
+            "video-info sidebar"
+            "description sidebar"
+            "comments sidebar";
+    }
+
+    .video-player {
+        grid-area: video-player;
+    }
+
+    /* Exemplo se adicionar sidebar futuramente:
+    .sidebar {
+        grid-area: sidebar;
+    } */
+}
+
+/* Estilos das seções (comum para mobile/desktop) */
+.video-player {
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 16 / 9; /* Mantém a proporção do vídeo */
+    position: relative;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    padding: 20px;
+    
+}
+
+.video-info, .description, .comments {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+}
+header {
+    background-color: #f8f8f8;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
