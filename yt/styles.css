@@ -14,6 +14,7 @@ p{
     display: grid;
     grid-template-columns: 1fr; /* Layout single-column por padrão (mobile) */
     gap: 20px; /* Espaço entre as seções */
+    
 }
 
 /* Desktop: Grid com área para sidebar (se quiser adicionar no futuro) */
@@ -47,6 +48,7 @@ p{
     padding-top: 56.25%; /* 16:9 Aspect Ratio */
     padding: 20px;
     
+    
 }
 
 .video-info, .description, .comments {
@@ -55,6 +57,8 @@ p{
     border-radius: 8px;
     margin-bottom: 20px;
     border: 1px solid #e0e0e0;
+    display: grid;
+    border-radius: 15px;
 }
 header {
     background-color: #f8f8f8;
@@ -62,4 +66,23 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 15px;
+
+}
+.related-videos{
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr, 1fr;
+    width: 350px;
+
+}
+.lateral-bar{
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+
 }
