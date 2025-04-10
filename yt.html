@@ -8,17 +8,27 @@
 </head>
 <body>
     <header>
-        <section class="lateral-bar">
-            <img src="images/1.jpg" alt="user">
+        <div class="sidebar-item">
+        <img src="images/1.jpg" alt="user">
         <h1>Meu Canal</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Vídeos</a></li>
-                <li><a href="#">Playlists</a></li>
-                <li><a href="#">Sobre</a></li>
-            </ul>
-        </nav>
+        </div>
+        <div class="side-bar">
+            <div class="sidebar-item">
+                <span>Início</span>
+            </div>
+            <div class="sidebar-item">
+                <span>Explorar</span>
+            </div>
+            <div class="sidebar-item">
+                <span>Inscrições</span>
+            </div>
+            <hr>
+            <div class="sidebar-item">
+                <span>Biblioteca</span>
+            </div>
+            <div class="sidebar-item">
+                <span>Histórico</span>
+            </div>
         </section>
     </header>
     <section class="video-info">
@@ -28,15 +38,15 @@
         <!-- Player de Vídeo -->
         <div class="video-container">
             <iframe 
-                width="360" 
-                height="300" 
+                width="560" 
+                height="315" 
                 src="https://www.youtube.com/embed/VIDEO_ID" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
                 
             </iframe>        
-                <!-- Informações do Vídeo -->
+                <!-- Status do Vídeo -->
                         <div class="video-stats">
                 <span>100.000 visualizações</span>
                 <button class="like-btn"> Like</button>
