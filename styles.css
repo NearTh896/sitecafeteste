@@ -89,8 +89,6 @@ header .user-icons img {
     left: 0;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-direction: column;
-    padding: 20px;
     overflow-y: auto;
 }
 
@@ -108,7 +106,7 @@ header .user-icons img {
     border-radius: 50%;
     display: block;
     align-items: start;
-    
+
 }
 .sidebar-item h3 {
     font-size: 16px;
@@ -124,11 +122,35 @@ header .user-icons img {
     height: 50px;
     border-radius: 80%;
 }
-.video-title {
-    font-size: 24px;
-    margin-bottom: 20px;
+.top-bar {
+    width: 300px;
+    height: 7%;
+    background-color: #fafafa;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 240px; 
+    z-index: 1000;
+    border-radius: 15px;
+}
+.search-bar {
+    width: 100%;
+    height: 35px;
+    padding: 0 10px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
 }
 
+.video-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+    margin: 0;
+    line-height: 1.4;
+}
 .video-container {
     margin-bottom: 20px;
 }
@@ -143,8 +165,11 @@ header .user-icons img {
     background-color: #000;
 }
 
+
 .video-info {
-    margin-top: 15px;
+    font-size: 12px;
+    color: #555;
+    margin-top: 5px;
 }
 
 .video-info h1 {
@@ -171,7 +196,7 @@ header .user-icons img {
     background-color: #d1d1d1;
 }
 
-.video-info .video-details {
+.video-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -226,20 +251,22 @@ header .user-icons img {
     font-size: 14px;
 }
 
-.comment {
+.comment-user{
     display: flex;
-    align-items: flex-start;
+    align-items: left;
     gap: 10px;
     margin-bottom: 15px;
+    align-content: space-between;
+    flex-direction: column; /* Coloca o texto abaixo da imagem */
 }
 
-.comment img {
+.comment-user img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
 }
 
-.comment p {
+.comment-user p {
     background-color: #f0f0f0;
     padding: 10px;
     border-radius: 5px;
@@ -258,24 +285,29 @@ header .user-icons img {
     margin-bottom: 15px;
     gap: 10px;
 }
+.video-details {
+    display: flex;
+    flex-direction: column; /* Título e informações ficam empilhados verticalmente */
+}
+
 
 .related-video img {
     border-radius: 5px;
     background-color: #ddd;
 }
 
-.related-video .video-details {
+.related-video  {
     flex: 1;
 }
 
-.related-video .video-details h3 {
+.related-video  h3 {
     font-size: 14px;
     margin: 0;
     line-height: 1.4;
     color: #000;
 }
 
-.related-video .video-details p {
+.related-video   {
     font-size: 12px;
     color: #555;
     margin: 5px 0 0;
