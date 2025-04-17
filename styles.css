@@ -113,7 +113,7 @@ header .user-icons img {
 }
 
 .sidebar-item:hover {
-    background-color: #f1f1f1;
+    background-color: #ccc;
 }
 
 .sidebar-item img {
@@ -192,7 +192,9 @@ header .user-icons img {
 }
 
 .video-stats button:hover {
-    background-color: #F2F2F2;
+    background-color: #ccc;
+    transition: background-color 0.5s ease;
+    transform: scale(1.05);
 }
 
 .video-info {
@@ -247,8 +249,24 @@ header .user-icons img {
     flex: 1;
     padding: 8px 10px;
     border: 1px solid #ccc;
-    border-radius: 3px;
+    border-radius: 15px;
     font-size: 14px;
+}
+.new-comment button {
+    background-color: #F2F2F2;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.new-comment button:hover {
+    background-color: #ccc;
+    transition: background-color 0.5s ease;
+    transform: scale(1.05);
+}
+.new-comment button:active {
+    transform: scale(0.95);
 }
 
 .comment-user {
@@ -280,6 +298,10 @@ header .user-icons img {
     line-height: 1.4;
     flex-direction: column;    
 
+}
+.comment-user h4 :hover {
+    transform: scale(1. 1);
+    color: #000;
 }
 
 /* Sugestões de Vídeos */
