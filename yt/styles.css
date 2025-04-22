@@ -17,11 +17,24 @@ a {
     text-decoration: none;
     color: inherit;
 }
+/* Para telas menores que 768px (tamanho típico de tablets e celulares) */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none; /* Esconde a barra lateral para economizar espaço */
+    }
+
+    header {
+        flex-direction: column; /* Ajusta o cabeçalho para um layout vertical */
+        align-items: flex-start;
+    }
+
+    .search-bar {
+        width: 100%; /* Expande a barra de busca para ocupar toda a largura */
+    }
+}
 
 /* Cabeçalho */
 header {
-    display: flex;
-    justify-content: left;
     align-items: center;
     background-color: #fff;
     padding: 10px 20px;
@@ -50,7 +63,7 @@ header .search-bar {
 
 header .search-bar input {
     width: 50%;
-    padding: 8px 10px;
+    padding: 10px 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
     font-size: 14px;
@@ -181,7 +194,18 @@ header .user-icons img {
     display: flex;
     font-size: 15px;
 }
+@media (max-width: 768px) {
+    .video-container iframe {
+        width: 100%; /* O vídeo ocupará toda a largura disponível */
+        height: auto; /* Ajustará a altura proporcionalmente */
+    }
 
+    .video-stats {
+        flex-direction: column; /* Empilha os botões verticalmente */
+        align-items: flex-start;
+        gap: 10px; /* Adiciona espaçamento entre os itens */
+    }
+}
 .video-stats button {
     background-color: #F2F2F2;
     border: none;
@@ -244,6 +268,20 @@ header .user-icons img {
     gap: 10px;
     width: 350px;
 }
+@media (max-width: 768px) {
+    .new-comment {
+        flex-direction: column; /* Alinha os elementos verticalmente */
+        gap: 5px; /* Menor espaçamento entre os elementos */
+    }
+
+    .new-comment input {
+        width: 100%; /* Expande o campo de entrada */
+    }
+
+    .new-comment button {
+        width: 100%; /* O botão ocupa toda a largura */
+    }
+}
 
 .new-comment input {
     flex: 1;
@@ -281,6 +319,22 @@ header .user-icons img {
     border-radius: 15px;
     background-color: #F2F2F2;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 768px) {
+    .comments-section {
+        padding: 10px; /* Reduz o espaçamento */
+    }
+
+    .comment-user {
+        flex-direction: column; /* Coloca imagem e texto em blocos verticais */
+        align-items: left; /* Centraliza os elementos */
+        text-align: left; /* Alinha o texto à esquerda */
+    }
+
+    .comment-user img {
+        width: 30px; /* Reduz o tamanho da imagem */
+        height: 30px;
+    }
 }
 
 .comment-user img {
@@ -330,6 +384,22 @@ header .user-icons img {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+@media (max-width: 768px) {
+    .related-videos {
+        flex-direction: column; /* Organiza os vídeos relacionados em uma coluna */
+    }
+
+    .related-video {
+        flex-direction: column; /* Empilha a miniatura e os detalhes verticalmente */
+        align-items: center;
+        text-align: center;
+    }
+
+    .related-video img {
+        width: 100%; /* Garante que a miniatura ocupe toda a largura disponível */
+        height: auto;
+    }
 }
 
 .related-video  {
